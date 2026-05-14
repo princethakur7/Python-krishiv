@@ -1,1 +1,35 @@
+# Library Management System
 
+#Book Class
+class Book:
+    #constructor
+    def __init__(self, book_id, title, author):
+        #book details
+        self.book_id = book_id
+        self.title = title
+        self.author = author
+
+        #book status
+        self.is_issued = False
+
+# Library class
+class Library:
+    #constructor
+    def __init__(self):
+        #Empty list to store book
+        self.books = []
+
+    #Add book
+    def add_book(self):
+        print("\nADD NEW BOOK")
+
+        #Taking book details
+        book_id = input("Enter Book ID : ")
+        title = input("Enter Book Name : ")
+        author = input("Enter Author Name : ")
+
+        #creating object of Book Class
+        new_book = Book(book_id,title,author)
+
+        # Adding book object into list
+        self.books.append(new_book)
